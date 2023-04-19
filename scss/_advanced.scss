@@ -1,0 +1,88 @@
+section.advanced{
+    padding-bottom: 90px;
+    .container{
+        max-width: 874px;
+        margin: 0 auto;
+    }
+    .advanced_list{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding-top: 50px;
+        @media screen and (max-width: 680px) {
+            flex-direction: column;
+            align-items: center;
+        }
+        @media screen and (max-width: 680px) {
+
+        }
+        .advanced_title{
+            margin-top: 40px;
+            white-space: nowrap;
+            margin-bottom: 10px;
+            @media screen and (max-width: 800px) {
+                white-space: unset;
+            }
+        }
+        .advanced_desc{
+            font-size: 14px;
+            color: rgb(0, 0, 0);
+            line-height: 1.286;
+        }
+        .advanced_container{
+            max-width: 27%;
+            @media screen and (max-width: 680px) {
+                max-width: 100%;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-bottom: 30px;
+            }
+        }
+        &__item{
+            
+            width: 232px;
+            height: 232px;
+            border-radius: 10px;
+            box-shadow: 0px 8px 13px 0px rgba(0, 0, 0, 0.05);
+            background-color: rgb(34, 31, 31);
+            position: relative;
+            background-size: 100% 100%;
+            transition: background-size .5s ease;
+            background-position: center;
+            &:hover{
+                background-size: 110% 110%;
+            }
+            &__count{
+                border-radius: 50%;
+                background-color: rgb(228, 69, 74);
+                width: 44px;
+                height: 44px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-weight: bold;
+                color: white;
+                font-size: 18px;
+            }
+        }
+    }
+}
+  
+.З_циклонною_технологією_всмоктування___можете_н {
+    font-size: 14px;
+    font-family: "MontserratRoman";
+    color: rgb(0, 0, 0);
+    line-height: 1.286;
+    position: absolute;
+    left: 1135.053px;
+    top: 1792.248px;
+    z-index: 57;
+  }
+  
+  
