@@ -28,7 +28,11 @@ jQuery(document).ready(function ($) {
       $('#slider ul').css({ width: sliderUlWidth, marginLeft: - slideWidth });
       
       $('#slider ul li:last-child').prependTo('#slider ul');
-  
+      var videoPlayer = document.getElementById('videoPlayer');
+      videoPlayer.addEventListener('click', function(){
+        $('.play_btn').hide();
+        this.play()
+      })
       function moveLeft() {
           $('#slider ul').animate({
               left: + slideWidth

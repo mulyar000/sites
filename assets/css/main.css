@@ -120,8 +120,22 @@ section.main {
   margin-top: 75px;
   padding-bottom: 20px;
 }
+@media screen and (max-width: 930px) {
+  section.main {
+    background-position: center top;
+    padding-left: 20px;
+    padding-top: 30px;
+  }
+}
 section.main .container {
   position: relative;
+}
+@media screen and (max-width: 930px) {
+  section.main .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 section.main .main_cleaner {
   position: absolute;
@@ -129,6 +143,21 @@ section.main .main_cleaner {
   bottom: 0px;
   height: 550px;
   width: 450px;
+}
+@media screen and (max-width: 930px) {
+  section.main .main_cleaner {
+    position: relative;
+    top: unset;
+    right: unset;
+    bottom: unset;
+    left: unset;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding-top: 115px;
+    width: 100%;
+  }
 }
 section.main .main_cleaner .main_cleaner__label {
   font-size: 14px;
@@ -143,6 +172,11 @@ section.main .main_cleaner .main_cleaner__prices {
   right: 0px;
   bottom: 150px;
   text-align: right;
+}
+@media screen and (max-width: 930px) {
+  section.main .main_cleaner .main_cleaner__prices {
+    right: 15px;
+  }
 }
 section.main .main_cleaner .main_cleaner__prices .main_cleaner_status {
   font-size: 14px;
@@ -164,14 +198,43 @@ section.main .main_cleaner img {
   right: 0px;
   bottom: 0px;
 }
+@media screen and (max-width: 930px) {
+  section.main .main_cleaner img {
+    right: unset;
+    bottom: unset;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 30px;
+  }
+}
 section.main h1.main_title {
   font-size: 42px;
   font-weight: 800;
   text-transform: uppercase;
 }
+@media screen and (max-width: 930px) {
+  section.main h1.main_title {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 450px) {
+  section.main h1.main_title {
+    font-size: 34px;
+  }
+}
 section.main h3.main_subtitle {
   font-size: 24px;
   font-weight: 600;
+}
+@media screen and (max-width: 930px) {
+  section.main h3.main_subtitle {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 450px) {
+  section.main h3.main_subtitle {
+    font-size: 18px;
+  }
 }
 section.main .main_properties {
   padding-top: 60px;
@@ -466,6 +529,7 @@ section.videos .videos_items {
 }
 section.videos .videos_items .videos_item {
   width: 450px;
+  position: relative;
 }
 @media screen and (max-width: 840px) {
   section.videos .videos_items .videos_item {
@@ -476,12 +540,27 @@ section.videos .videos_items .videos_item {
     text-align: center;
   }
 }
+section.videos .videos_items .videos_item video {
+  max-width: 100%;
+}
 section.videos .videos_items .videos_item .videos_item_placeholder {
   background-size: cover;
   background-position: center;
   border-radius: 15px;
   width: 438px;
   height: 438px;
+  overflow: hidden;
+  position: relative;
+}
+section.videos .videos_items .videos_item .videos_item_placeholder .play_btn {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  color: white;
+  text-align: center;
+  width: 170px;
+  height: 50px;
 }
 section.videos .videos_items .videos_item .videos_item__device_name {
   font-size: 14px;
@@ -688,6 +767,7 @@ section.pre_footer .pre_footer__items .pre_footer__item__title {
 footer {
   min-height: 360px;
   background: #212121;
+  padding-bottom: 30px;
 }
 footer .footer_items {
   display: flex;
