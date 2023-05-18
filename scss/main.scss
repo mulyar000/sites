@@ -1,10 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
 @import 'vars';
 @import 'header';
 @import 'mainSection';
-@import 'about';
-@import 'advanced';
-@import 'videos';
+@import 'postsSection';
 @import 'reviews';
 @import 'footer';
 *{
@@ -12,6 +10,9 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
+}
+html, body{
+    overflow-x: hidden;
 }
 a{
     text-decoration: none;
@@ -26,7 +27,7 @@ html{
     margin: 0 auto;
 }
 body{
-    background-color: #f6f6f5;
+    background-color: #f3fafd;
     overflow-x:hidden;
 }
 .section_title{
@@ -38,4 +39,20 @@ body{
     font-size: 14px;
     text-align: center;
     font-weight: 600;
+}
+@media screen and (max-width: 930px) {
+    .container{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .container div{
+        max-width: 100%;
+    }
+}
+img{
+    max-width: 100%;
+}
+.marked{
+    color: rgb(54, 169, 225);
+    font-family: inherit;
 }

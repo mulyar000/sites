@@ -30,8 +30,14 @@ jQuery(document).ready(function ($) {
       $('#slider ul li:last-child').prependTo('#slider ul');
       var videoPlayer = document.getElementById('videoPlayer');
       videoPlayer.addEventListener('click', function(){
+        console.log(this.paused)
+        if(!this.paused) {
+            $('.play_btn').show();
+            $('#videoPlayer').trigger('pause');
+            return
+        }
         $('.play_btn').hide();
-        this.play()
+        $(this).trigger('play');
       })
       function moveLeft() {
           $('#slider ul').animate({
@@ -58,6 +64,7 @@ jQuery(document).ready(function ($) {
       $('a.control_next').click(function () {
           moveRight();
       });
-  
+        // Your code her
   });    
+  
   

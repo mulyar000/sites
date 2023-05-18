@@ -4,7 +4,7 @@ $header_height: 75px;
     width: 100%;
     height: 100%;
     z-index: 999999;
-    background: black;
+    background: #36a9e1;
     display: none;
     &.active{
         display: flex;
@@ -30,7 +30,7 @@ $header_height: 75px;
 }
 header{
     width: 100%;
-    background: #212121;
+    background: #36a9e1;
     height: $header_height;
     color: white;
     position: fixed;
@@ -46,21 +46,34 @@ header{
         display: flex;
         justify-content: space-between;
         align-items: center;
+        
         ul.nav{
             display: flex;
             list-style: none;
-            gap: 60px;
+            gap: 40px;
             height: $header_height;
             align-items: center;
-            font-size: 18px;
-            font-weight: 600;
-            text-transform: uppercase;
+            font-size: 16px;
+            font-weight: 400;
+            // text-transform: uppercase;
+            @media screen and (max-width: 900px) {
+                gap: 15px;
+            }
             li{     
                 display: block;
                 @media screen and (max-width: 685px) {
                     display: none;
                     padding-top: 3px;
                 } 
+                &.h_logotype{
+                    @media screen and (max-width: 780px) {
+                        max-width: 200px;
+                    }
+                    @media screen and (max-width: 685px) {
+                        display: block;
+                        padding-top: 3px;
+                    } 
+                }
                 &.mobile_btn{
                     display: none;
                     @media screen and (max-width: 685px) {
@@ -75,34 +88,11 @@ header{
             }
 
         }
-        .cart{
-            
-            display: flex;
-            align-items: center;
-            gap: 22px;
-            .cart_btn{
-                width: 53px;
-                height: 53px;
-                border-radius: 10px;
-                background-color: #00a046;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                cursor: pointer;
-            }
-            .cart_prices{
-                padding-top: 10px;
-                .cart_prices__real{
-                    font-size: 14px;
-                    text-decoration: line-through;
-                    color: #c3c3c3;
-                    line-height: 8px;
-                }
-                .cart_prices__discount{
-                    font-size: 24px;
-                    color: #e4454a;
-                    font-weight: 600;
-                }
+        .login_btn{
+            margin-right: 50px;
+            cursor: pointer;
+            @media screen and (max-width: 900px) {
+                margin-right: 0px;
             }
         }
     }
